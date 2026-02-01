@@ -210,12 +210,6 @@ const Events = () => {
     return events.some((event) => event.date === dateStr);
   };
 
-  const getEventForDate = (date: Date | null) => {
-    if (!date) return null;
-    const dateStr = date.toISOString().split('T')[0];
-    return events.find((event) => event.date === dateStr) || null;
-  };
-
   const isToday = (date: Date | null) => {
     if (!date) return false;
     const today = new Date();
@@ -560,7 +554,6 @@ const Events = () => {
                   </div>
                 ))}
                 {days.map((date, index) => {
-                  const event = getEventForDate(date);
                   const hasEventOnDay = hasEvent(date);
                   const isTodayDate = isToday(date);
 
