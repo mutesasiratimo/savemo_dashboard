@@ -1,0 +1,335 @@
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 32px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+[data-theme='dark'] .dashboard-header {
+  background: #1f2937;
+  border-bottom-color: #374151;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+[data-theme='dark'] .header-search {
+  background: #374151;
+  border-color: #4b5563;
+}
+
+.header-search svg {
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.header-search input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  color: #1f2937;
+  width: 200px;
+  transition: color 0.3s;
+}
+
+[data-theme='dark'] .header-search input {
+  color: #e5e7eb;
+}
+
+.header-search input::placeholder {
+  color: #9ca3af;
+  transition: color 0.3s;
+}
+
+[data-theme='dark'] .header-search input::placeholder {
+  color: #6b7280;
+}
+
+.header-icon-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  background: #f9fafb;
+  color: #6b7280;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+[data-theme='dark'] .header-icon-button {
+  background: #374151;
+  color: #9ca3af;
+}
+
+.header-icon-button:hover {
+  background: #f3f4f6;
+  color: #4918DE;
+}
+
+[data-theme='dark'] .header-icon-button:hover {
+  background: #4b5563;
+  color: #4918DE;
+}
+
+.notification-wrapper {
+  position: relative;
+}
+
+.notification-button {
+  position: relative;
+}
+
+.notification-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: #ef4444;
+  color: white;
+  border-radius: 10px;
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 0 4px;
+  border: 2px solid white;
+}
+
+[data-theme='dark'] .notification-badge {
+  border-color: #1f2937;
+}
+
+.notifications-popup {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 320px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e5e7eb;
+  z-index: 1000;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+[data-theme='dark'] .notifications-popup {
+  background: #1f2937;
+  border-color: #374151;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.notifications-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  transition: border-color 0.3s;
+}
+
+[data-theme='dark'] .notifications-header {
+  border-bottom-color: #374151;
+}
+
+.notifications-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  transition: color 0.3s;
+}
+
+[data-theme='dark'] .notifications-header h3 {
+  color: #e5e7eb;
+}
+
+.notifications-content {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.no-notifications {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+  transition: color 0.3s;
+}
+
+[data-theme='dark'] .no-notifications {
+  color: #9ca3af;
+}
+
+.header-avatar-wrapper {
+  position: relative;
+  margin-left: 8px;
+}
+
+.header-avatar {
+  cursor: pointer;
+}
+
+.avatar-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #4918DE;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  transition: transform 0.2s;
+}
+
+.avatar-circle:hover {
+  transform: scale(1.05);
+}
+
+.avatar-menu-popup {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 280px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e5e7eb;
+  z-index: 1000;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+[data-theme='dark'] .avatar-menu-popup {
+  background: #1f2937;
+  border-color: #374151;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.avatar-menu-account {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  transition: border-color 0.3s;
+}
+
+[data-theme='dark'] .avatar-menu-account {
+  border-bottom-color: #374151;
+}
+
+.account-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+  transition: color 0.3s;
+}
+
+[data-theme='dark'] .account-name {
+  color: #e5e7eb;
+}
+
+.account-email {
+  font-size: 14px;
+  color: #6b7280;
+  transition: color 0.3s;
+}
+
+[data-theme='dark'] .account-email {
+  color: #9ca3af;
+}
+
+.avatar-menu-items {
+  padding: 8px 0;
+}
+
+.avatar-menu-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border: none;
+  background: transparent;
+  color: #1f2937;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.avatar-menu-item svg {
+  color: #1f2937;
+  transition: color 0.2s;
+}
+
+[data-theme='dark'] .avatar-menu-item {
+  color: #e5e7eb;
+}
+
+[data-theme='dark'] .avatar-menu-item svg {
+  color: #e5e7eb;
+}
+
+.avatar-menu-item:hover {
+  background: #f3f4f6;
+}
+
+[data-theme='dark'] .avatar-menu-item:hover {
+  background: #374151;
+}
+
+.avatar-menu-item.sign-out {
+  color: #ef4444;
+}
+
+.avatar-menu-item.sign-out svg {
+  color: #ef4444;
+}
+
+.avatar-menu-item.sign-out:hover {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.avatar-menu-item.sign-out:hover svg {
+  color: #dc2626;
+}
+
+[data-theme='dark'] .avatar-menu-item.sign-out:hover {
+  background: #7f1d1d;
+  color: #fca5a5;
+}
+
+[data-theme='dark'] .avatar-menu-item.sign-out:hover svg {
+  color: #fca5a5;
+}

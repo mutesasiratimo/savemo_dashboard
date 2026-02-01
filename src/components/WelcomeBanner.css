@@ -1,0 +1,80 @@
+.welcome-banner {
+  background: linear-gradient(135deg, #4918DE 0%, #6b46c1 100%);
+  border-radius: 16px;
+  padding: 16px 24px;
+  margin-bottom: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  gap: 24px;
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.banner-greeting {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.banner-message {
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+.banner-illustration {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.money-illustration {
+  font-size: 32px;
+}
+
+.view-analytics-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.view-analytics-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.banner-close {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+  margin-left: 16px;
+}
+
+.banner-close:hover {
+  opacity: 1;
+}

@@ -1,0 +1,121 @@
+.account-summary-section {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.summary-cards {
+  display: flex;
+  gap: 16px;
+  flex: 1;
+}
+
+.summary-card {
+  flex: 1;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  min-width: 200px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+[data-theme='dark'] .summary-card {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.summary-card.highlight {
+  background: #fef3c7;
+  border-color: #fde68a;
+}
+
+[data-theme='dark'] .summary-card.highlight {
+  background: #78350f;
+  border-color: #92400e;
+}
+
+.card-label {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s;
+}
+
+[data-theme='dark'] .card-label {
+  color: #9ca3af;
+}
+
+[data-theme='dark'] .summary-card.highlight .card-label {
+  color: #fef3c7;
+}
+
+.coin-icon {
+  font-size: 18px;
+}
+
+.card-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  transition: color 0.3s;
+}
+
+[data-theme='dark'] .card-value {
+  color: #e5e7eb;
+}
+
+[data-theme='dark'] .summary-card.highlight .card-value {
+  color: #fef3c7;
+}
+
+.summary-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 160px;
+}
+
+.action-button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  white-space: nowrap;
+}
+
+.action-button.primary {
+  background: #4918DE;
+  color: white;
+}
+
+.action-button.primary:hover {
+  background: #3a12b0;
+}
+
+.action-button.secondary {
+  background: white;
+  color: #4918DE;
+  border: 1px solid #4918DE;
+  transition: background-color 0.3s;
+}
+
+[data-theme='dark'] .action-button.secondary {
+  background: #1f2937;
+  border-color: #4918DE;
+}
+
+.action-button.secondary:hover {
+  background: #f9fafb;
+}
+
+[data-theme='dark'] .action-button.secondary:hover {
+  background: #374151;
+}
