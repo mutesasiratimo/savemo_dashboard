@@ -5,15 +5,13 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-# Install dependencies needed for npm and build tools
-RUN apk add --no-cache libc6-compat python3 make g++
-
 # Copy package files
 COPY package*.json ./
 
 # Install dependencies (including devDependencies needed for build)
 # npm ci is faster and more reliable for CI/CD when package-lock.json exists
-RUN npm ci --no-audit
+# Using --prefer-offline and --no-audit for faster builds
+RUN npm ci --no-audit --prefer-offline
 
 # Copy source code
 COPY . .

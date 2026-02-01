@@ -62,7 +62,10 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
-          platforms: linux/amd64,linux/arm64
+          # Build for amd64 only (faster builds, ~2-3 min vs 8-10 min for multi-platform)
+          # Most servers use amd64. Uncomment the line below for multi-platform support:
+          platforms: linux/amd64
+          # platforms: linux/amd64,linux/arm64
 
       - name: Generate deployment summary
         if: github.event_name != 'pull_request'
